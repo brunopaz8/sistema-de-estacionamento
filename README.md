@@ -1,5 +1,5 @@
 # 📚 Sistema de Estacionamento 🚗
-
+ToDo "descrição"
 
 ### **⚒️ Tecnologias utilizadas**
 
@@ -9,13 +9,14 @@
 
 ### ⚙️ Funcionalidades
 * Estacionamento:
-    - Capacidade 
-    - Taxa inicial
-    - Taxa por hora
+    - Definir capacidade 
+    - Definir taxa inicial
+    - Definir taxa por hora
 * Carros  
     - Adicionar 
     - Retirar 
-    - Mostrar todos carros do estacionamento
+    - Mostrar todos os carros
 
 ## 📸 Vídeo de desmonstração
 
+ToDo "video de demonstração"
