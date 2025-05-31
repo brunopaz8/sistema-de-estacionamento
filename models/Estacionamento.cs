@@ -9,14 +9,61 @@ namespace Sistema_de_Estacionamento.models
     {
         public decimal TaxaInicial { get; set; }
         public decimal TaxaPorHora { get; set; }
+        public double Capacidade { get; set; }
         public List<string> Carros { get; set; } = new List<string>();
+
+        public Estacionamento() { }
+
+        public Estacionamento(decimal taxaInicial, decimal taxaPorHora, double capacidade)
+        {
+            TaxaInicial = taxaInicial;
+            TaxaPorHora = taxaPorHora;
+            Capacidade = capacidade;
+        }
+        /// <summary>
+        /// Define qual vai ser a capacidade do estácionamento.
+        /// </summary>
+        public void DefinirCapacidade()
+        {
+            while (true)
+            {
+                Console.WriteLine(@"
+============== Capacidade ==============
+Qual será a capacidade do estacionamento
+========================================
+Capacidade: ");
+                string capacidade = Console.ReadLine();
+                if (double.TryParse(capacidade, out double capacidadeInt) && capacidadeInt > 2)
+                {
+                    Console.Clear();
+                    Capacidade = capacidadeInt;
+                    Console.WriteLine(@$"
+=============== Capacidade Definida ===============
+A capacidade definida foi de: {Capacidade} carros.
+===================================================");
+                    break;
+                }
+                else if (capacidadeInt <= 2)
+                {
+                    Console.Clear();
+                    Console.WriteLine($@"
+XXXXXXXXXXXXX Valor Inválido XXXXXXXXXXXXX
+O valor informado tem que ser maior que 2!
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Tente novamente!");
+                }
+                else
+                {
+                    Console.WriteLine("Entrada inválida. Por favor, digite um número!");
+                }
+            }
+        }
 
         /// <summary>
         /// Define qual vai ser a Taxa inicial do estácionamento.
         /// </summary>
         public void DefinirTaxaInicial()
         {
-            string Valor;
             Console.WriteLine(@"
 =============== Taxa Inicial ===============
 Qual será o preço inicial do estacionamento?
@@ -24,7 +71,7 @@ Qual será o preço inicial do estacionamento?
 Taxa inicial: ");
             while (true)
             {
-                Valor = Console.ReadLine();
+                string Valor = Console.ReadLine();
                 if (decimal.TryParse(Valor, out decimal Numero))
                 {
                     Console.Clear();
@@ -89,10 +136,11 @@ Qual a placa do carro?
 Sua escolha: ");
                 string Placa = Console.ReadLine();
 
-                if (!Carros.Contains(Placa))
+                if (!Carros.Contains(Placa) && Capacidade > 0)
                 {
                     Console.Clear();
                     Carros.Add(Placa);
+                    Capacidade -= 1;
                     Console.WriteLine($@"
 ============= Carro Adicionado =============
 O carro com a placa: {Placa} foi adicionado.
@@ -108,15 +156,20 @@ O carro com a placa '{Placa}' já foi adicionado!
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Tente novamente!");
                 }
-                else if (Placa == null)
+                else if (Capacidade == 0)
                 {
                     Console.Clear();
-                    Console.WriteLine("É preciso digitar algo!");
+                    Console.WriteLine(@"
+XXXXXXXXXXXXXXX Carro Não Adicionado XXXXXXXXXXXXXXXX
+O estacionamento está lotado, retire um carro antes.
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Tente novamente!");
+                    break;
                 }
                 else
                 {
                     Console.Clear();
-                    Console.WriteLine("Como você chegou aqui?");
+                    Console.WriteLine("Entrada inválida, digite um placa válida!");
                 }
             }
         }
@@ -145,9 +198,12 @@ Carros que estão no estacionamento:");
                     int indice = Carros.IndexOf(Placa) + 1;
                     Console.WriteLine($"{indice} - {Placa}");
                 }
-                Console.WriteLine("================================");
+                double porcentagem = Carros.Count / (Carros.Count + Capacidade) * 100;
+                Console.WriteLine(@$"
+Total Usado: {porcentagem:F2}%
+================================");
             }
-}
+        }
 
         /// <summary>
         /// Mostra os valores das taxas
@@ -192,6 +248,7 @@ Sua escolha: ");
                     break;
             }
         }
+
         /// <summary>
         /// Definindo o tempo que um carro passou no estácionamento
         /// </summary>
@@ -255,6 +312,7 @@ Tempo:");
 =============================== Carro Retirado ===============================
 O carro de placa {Placa} foi retirado e pagou o valor total de R$ {TotalPago:F2} .
 ==============================================================================");
+                    Capacidade += 1;
                     break;
                 }
                 else

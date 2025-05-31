@@ -4,6 +4,7 @@ Estacionamento e = new Estacionamento();
 
 Console.Clear();
 Console.WriteLine("Bem vindo ao simulador de estácionamento!");
+e.DefinirCapacidade();
 e.DefinirTaxaInicial();
 e.DefinirTaxaPorHora();
 
