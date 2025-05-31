@@ -23,6 +23,10 @@ Este projeto é uma aplicação de console desenvolvida em .NET(C#) para gerenci
 [![Assista no YouTube](https://img.youtube.com/vi/-LfQIChqLwA/0.jpg)](https://youtu.be/-LfQIChqLwA)
 
 
+### 🟣 Função Adicionar, Retirar e Mostrar Carros 
+[![Assista no YouTube](https://img.youtube.com/vi/-LfQIChqLwA/0.jpg)](https://youtu.be/-LfQIChqLwA)
+
+---
 ## 🚀 Como Executar o Projeto
 
 1️⃣ **Clone o repositório:**
