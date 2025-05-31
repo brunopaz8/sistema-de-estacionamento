@@ -18,5 +18,5 @@ ToDo "descrição"
     - Mostrar todos os carros
 
 ## 📸 Vídeo de desmonstração
-
-ToDo "video de demonstração"
+### 🟣 Função Adicionar, Retirar e Mostrar Carros 
+[![Assista no YouTube](https://img.youtube.com/vi/-LfQIChqLwA/0.jpg)](https://youtu.be/-LfQIChqLwA)
