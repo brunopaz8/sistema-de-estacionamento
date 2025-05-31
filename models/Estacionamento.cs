@@ -215,7 +215,7 @@ Total Usado: {porcentagem:F2}%
 ========= Valores das Taxas =========
 Taxa inicial: R$ {TaxaInicial:F2} .
 Taxa por hora: R$ {TaxaPorHora:F2} .
-===================================
+=====================================
 ");
         }
 

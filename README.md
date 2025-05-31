@@ -5,6 +5,7 @@ Este projeto é uma aplicação de console desenvolvida em .NET(C#) para gerenci
 
 - .NET (C#)
 - Git/GitHub
+
 ---
 
 ### ⚙️ Funcionalidades
@@ -18,15 +19,18 @@ Este projeto é uma aplicação de console desenvolvida em .NET(C#) para gerenci
     - Retirar veículo ao estacionamento
     - Mostrar todos os veículo estacionados 
 
-## 📸 Vídeo de desmonstração
-### 🟣 Função Adicionar, Retirar e Mostrar Carros 
-[![Assista no YouTube](https://img.youtube.com/vi/-LfQIChqLwA/0.jpg)](https://youtu.be/-LfQIChqLwA)
+## 📸 Vídeo de Desmonstração
+### 🟣 Menu de Taxas
+<img src="img/MenuTaxas.png">
 
+### 🟣 Menu de Alterar Taxas
+<img src="img/MenuAlterarTaxas.png">
 
 ### 🟣 Função Adicionar, Retirar e Mostrar Carros 
 [![Assista no YouTube](https://img.youtube.com/vi/-LfQIChqLwA/0.jpg)](https://youtu.be/-LfQIChqLwA)
 
 ---
+
 ## 🚀 Como Executar o Projeto
 
 1️⃣ **Clone o repositório:**
