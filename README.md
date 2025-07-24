@@ -55,13 +55,13 @@ sistema-de-estacionamento/
 1️⃣ **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/brunopaz8/Sistema_de_Estacionamento.git
+   git clone https://github.com/brunopaz8/sistema-de-estacionamento.git
    ```
 
 2️⃣ **Navegue até o diretório do projeto:**
 
    ```bash
-   cd Sistema_de_Estacionamento
+   cd sistema-de-estacionamento
    ```
 
 3️⃣ **Compile e execute o projeto:**
