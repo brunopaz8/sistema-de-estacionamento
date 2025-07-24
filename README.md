@@ -1,6 +1,8 @@
 # 📚 Sistema de Estacionamento 🚗
 Este projeto é uma aplicação de console desenvolvida em .NET(C#) para gerenciar um estacionamento. Ele permite definir a capacidade do estacionamento, configurar taxas e controlar a entrada e saída de veículos.
 
+---
+
 ### **⚒️ Tecnologias utilizadas**
 
 - .NET (C#)
@@ -8,7 +10,7 @@ Este projeto é uma aplicação de console desenvolvida em .NET(C#) para gerenci
 
 ---
 
-### ⚙️ Funcionalidades
+### 🔧 Funcionalidades
 * Estacionamento:
     - Definir capacidade total de vagas
     - Definir taxa inicial
@@ -17,7 +19,24 @@ Este projeto é uma aplicação de console desenvolvida em .NET(C#) para gerenci
 * Carros  
     - Adicionar veículo ao estacionamento
     - Retirar veículo ao estacionamento
-    - Mostrar todos os veículo estacionados 
+    - Mostrar todos os veículo estacionados
+
+---
+
+## 📂 Estrutura de Pastas
+
+```
+sistema-de-estacionamento/
+├── Models/
+│   └── Estacionamento.cs
+├── .gitignore
+├── Progama.cs
+├── Sistema_de_Estacionamento.csproj
+├── Sistema_de_Estacionamento.sln
+└── README.md
+```
+
+---
 
 ## 📸 Vídeo de Desmonstração
 ### 🟣 Menu de Taxas
