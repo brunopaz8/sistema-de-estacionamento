@@ -15,11 +15,12 @@ namespace Sistema_de_Estacionamento.models
 
         public Estacionamento() { }
 
-        public Estacionamento(decimal taxaInicial, decimal taxaPorHora, double capacidade)
+        public Estacionamento(decimal taxaInicial, decimal taxaPorHora, double capacidade, List<string> carros)
         {
             TaxaInicial = taxaInicial;
             TaxaPorHora = taxaPorHora;
             Capacidade = capacidade;
+            Carros = carros;
         }
         
         /// <summary>
@@ -40,8 +41,8 @@ Sua escolha: ");
             switch (escolha)
             {
                 case "1":
-                    Estacionamento e1 = new Estacionamento(TaxaInicial, TaxaPorHora, Capacidade);
-                    string estacionamentoJson = JsonConvert.SerializeObject(e1);
+                    Estacionamento e1 = new Estacionamento(TaxaInicial, TaxaPorHora, Capacidade, Carros);
+                    string estacionamentoJson = JsonConvert.SerializeObject(e1, Formatting.Indented);
                     File.WriteAllText("LocalDB/estacionamento.json", estacionamentoJson);
                     break;
                 case "2":

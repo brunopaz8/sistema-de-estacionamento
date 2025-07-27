@@ -34,7 +34,7 @@ sistema-de-estacionamento/
 ├── Models/
 │   └── Estacionamento.cs
 ├── .gitignore
-├── Progama.cs
+├── Programa.cs
 ├── Sistema_de_Estacionamento.csproj
 ├── Sistema_de_Estacionamento.sln
 └── README.md
