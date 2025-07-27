@@ -3,14 +3,15 @@ Este projeto é uma aplicação de console desenvolvida em .NET(C#) para gerenci
 
 ---
 
-### **⚒️ Tecnologias utilizadas**
+## **⚒️ Tecnologias utilizadas**
 
-- .NET (C#)
-- Git/GitHub
+* .NET (C#)
+    - [Newtonsoft.json](https://www.nuget.org/packages/Newtonsoft.Json)
+* Git/GitHub
 
 ---
 
-### 🔧 Funcionalidades
+## 🔧 Funcionalidades
 * Estacionamento:
     - Definir capacidade total de vagas
     - Definir taxa inicial
@@ -20,6 +21,7 @@ Este projeto é uma aplicação de console desenvolvida em .NET(C#) para gerenci
     - Adicionar veículo ao estacionamento
     - Retirar veículo ao estacionamento
     - Mostrar todos os veículo estacionados
+ * Persistência dos dados localmente em arquivo `.json`
 
 ---
 
@@ -27,6 +29,8 @@ Este projeto é uma aplicação de console desenvolvida em .NET(C#) para gerenci
 
 ```
 sistema-de-estacionamento/
+├── LocalDB/
+│   └── estacionamento.json
 ├── Models/
 │   └── Estacionamento.cs
 ├── .gitignore
@@ -38,7 +42,32 @@ sistema-de-estacionamento/
 
 ---
 
+## 💾 Salvamento Local com JSON
+
+O sistema salva as configurações do estacionamento e dos de veículos localmente, utilizando o arquivo:
+
+```
+LocalDB/estacionamento.json
+```
+
+Exemplo de estrutura JSON:
+
+```json
+{
+  "TaxaInicial": 5.0,
+  "TaxaPorHora": 2.0,
+  "Capacidade" : "10",
+  "Carros": [
+    "ABC-1234",
+    "XYZ-9876"
+  ]
+}
+```
+
+---
+
 ## 📸 Vídeo de Desmonstração
+
 ### 🟣 Menu de Taxas
 <img src="img/MenuTaxas.png">
 
@@ -71,4 +100,13 @@ sistema-de-estacionamento/
    ```
 
    > Certifique-se de ter o [.NET SDK](https://dotnet.microsoft.com/download) instalado em sua máquina.
+
+---
+
+## 📌 Observações
+
+* O sistema considera letras maiúsculas/minúsculas no número da placa.
+* Os dados não salvos serão perdidos.
+
+
 
