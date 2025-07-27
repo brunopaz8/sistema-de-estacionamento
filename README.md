@@ -66,7 +66,7 @@ Exemplo de estrutura JSON:
 
 ---
 
-## 📸 Vídeo de Desmonstração
+## 📸 Vídeo de Demonstração
 
 ### 🟣 Menu de Taxas
 <img src="img/MenuTaxas.png">
