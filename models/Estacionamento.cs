@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Sistema_de_Estacionamento.models
 {
@@ -20,6 +21,35 @@ namespace Sistema_de_Estacionamento.models
             TaxaPorHora = taxaPorHora;
             Capacidade = capacidade;
         }
+        
+        /// <summary>
+        /// Salva no banco de dados local os dados do estacionamento
+        /// </summary>
+        public void Salvando()
+        {
+            Console.Clear();
+            Console.WriteLine(@"
+============== Salvamento ==============
+Deseja salvar os dados do estacionamento ?
+[1] - Sim
+[2] - Não
+========================================
+Sua escolha: ");
+            string escolha = Console.ReadLine().ToLower();
+
+            switch (escolha)
+            {
+                case "1":
+                    Estacionamento e1 = new Estacionamento(TaxaInicial, TaxaPorHora, Capacidade);
+                    string estacionamentoJson = JsonConvert.SerializeObject(e1);
+                    File.WriteAllText("LocalDB/estacionamento.json", estacionamentoJson);
+                    break;
+                case "2":
+                    break;
+            }
+
+        }
+
         /// <summary>
         /// Define qual vai ser a capacidade do estácionamento.
         /// </summary>
@@ -60,7 +90,7 @@ Tente novamente!");
         }
 
         /// <summary>
-        /// Define qual vai ser a Taxa inicial do estácionamento.
+        /// Define qual vai ser a Taxa inicial do estacionamento.
         /// </summary>
         public void DefinirTaxaInicial()
         {
@@ -91,7 +121,7 @@ O valor definido da taxa inicial foi de: R$ {TaxaInicial:F2}
         }
 
         /// <summary>
-        /// Define qual vai ser a Taxa por hora do estácionamento.
+        /// Define qual vai ser a Taxa por hora do estacionamento.
         /// </summary>
         public void DefinirTaxaPorHora()
         {
@@ -123,7 +153,7 @@ O Valor definido da taxa por hora foi de: R$ {TaxaPorHora:F2}
         }
 
         /// <summary>
-        /// Adiciona um carro no estácionamento.
+        /// Adiciona um carro no estacionamento.
         /// </summary>
         public void AdicionandoCarro()
         {
@@ -228,6 +258,7 @@ Taxa por hora: R$ {TaxaPorHora:F2} .
 ===== Alterando as Taxas =====
 [1] - Alterar a taxa Inicial.
 [2] - Alterar a taxa por hora.
+[3] - Voltar
 ==============================
 Sua escolha: ");
             string escolha = Console.ReadLine();
@@ -242,6 +273,9 @@ Sua escolha: ");
                     Console.Clear();
                     DefinirTaxaPorHora();
                     break;
+                case "3":
+                    Console.Clear();
+                    break;
                 default:
                     Console.Clear();
                     Console.WriteLine("Opção inválida!");
@@ -250,10 +284,10 @@ Sua escolha: ");
         }
 
         /// <summary>
-        /// Definindo o tempo que um carro passou no estácionamento
+        /// Definindo o tempo que um carro passou no estacionamento
         /// </summary>
         /// <returns>O tempo em decimal</returns>
-        public decimal InformandoTempo()
+        private decimal InformandoTempo()
         {
             while (true)
             {
@@ -301,7 +335,7 @@ Placa:");
                     Console.WriteLine($@"
 ================== Definindo a Taxa ==================
 Digite quanto tempo o carro de placa {Placa}, 
-ficou no estácionamento
+ficou no estacionamento
 ======================================================
 Tempo:");
 
