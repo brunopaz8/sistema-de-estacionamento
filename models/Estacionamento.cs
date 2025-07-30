@@ -8,10 +8,10 @@ namespace Sistema_de_Estacionamento.models
 {
     public class Estacionamento
     {
-        public decimal TaxaInicial { get; set; }
-        public decimal TaxaPorHora { get; set; }
-        public double Capacidade { get; set; }
-        public List<string> Carros { get; set; } = new List<string>();
+        private decimal TaxaInicial { get; set; }
+        private decimal TaxaPorHora { get; set; }
+        private double Capacidade { get; set; }
+        private List<string> Carros { get; set; } = new List<string>();
 
         public Estacionamento() { }
 
@@ -231,8 +231,8 @@ Carros que estão no estacionamento:");
                 }
                 double porcentagem = Carros.Count / (Carros.Count + Capacidade) * 100;
                 Console.WriteLine(@$"
-Total Usado: {porcentagem:F2}%
-================================");
+Total da capacidade usada: {porcentagem:F2}%
+===================================");
             }
         }
 
@@ -321,11 +321,12 @@ XXXXXXXXXXXXXXXXXXXXXXXXXX");
             }
             else
             {
+                Console.WriteLine("========== Retirando Carro ==========");
                 MostraTodosCarro();
                 Console.WriteLine(@"
-========== Retirar Carro ==========
-Digite a placa que deseja retirar:
-===================================
+Digite a placa do carro que deseja 
+retirar ou digite [3] para voltar
+=====================================
 Placa:");
             while (true)
             {
@@ -348,6 +349,9 @@ Tempo:");
 O carro de placa {Placa} foi retirado e pagou o valor total de R$ {TotalPago:F2} .
 ==============================================================================");
                     Capacidade += 1;
+                    break;
+                } else if (Placa == "3"){
+                        Console.Clear();
                     break;
                 }
                 else
