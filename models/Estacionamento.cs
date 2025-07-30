@@ -8,10 +8,10 @@ namespace Sistema_de_Estacionamento.models
 {
     public class Estacionamento
     {
-        private decimal TaxaInicial { get; set; }
-        private decimal TaxaPorHora { get; set; }
-        private double Capacidade { get; set; }
-        private List<string> Carros { get; set; } = new List<string>();
+        public decimal TaxaInicial { get; set; }
+        public decimal TaxaPorHora { get; set; }
+        public double Capacidade { get; set; }
+        public List<string> Carros { get; set; } = new List<string>();
 
         public Estacionamento() { }
 
