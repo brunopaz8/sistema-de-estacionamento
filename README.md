@@ -68,14 +68,8 @@ Exemplo de estrutura JSON:
 
 ## 📸 Vídeo de Demonstração
 
-### 🟣 Menu de Taxas
-<img src="img/MenuTaxas.png">
-
-### 🟣 Menu de Alterar Taxas
-<img src="img/MenuAlterarTaxas.png">
-
-### 🟣 Função Adicionar, Retirar e Mostrar Carros 
-[![Assista no YouTube](https://img.youtube.com/vi/-LfQIChqLwA/0.jpg)](https://youtu.be/-LfQIChqLwA)
+### 🟣 Principais Funções 
+[![Assista no YouTube](https://img.youtube.com/vi/-LfQIChqLwA/0.jpg)](https://youtu.be/qxZjGeRGMmg)
 
 ---
 
