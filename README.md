@@ -70,6 +70,7 @@ Exemplo de estrutura JSON:
 
 ### 🟣 Principais Funções 
 [![Assista no YouTube](https://i.ytimg.com/an_webp/qxZjGeRGMmg/mqdefault_6s.webp?du=3000&sqp=CLi1_sQG&rs=AOn4CLDVrPAGdZ66GC3dfiBZYGKXmT0Ewg)](https://youtu.be/qxZjGeRGMmg)
+> ▶️ Clique para ver o vídeo no youtube
 
 ---
 
