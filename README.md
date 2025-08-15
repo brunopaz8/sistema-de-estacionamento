@@ -13,14 +13,14 @@ Este projeto é uma aplicação de console desenvolvida em .NET(C#) para gerenci
 
 ## 🔧 Funcionalidades
 * Estacionamento:
-    - Definir capacidade total de vagas
-    - Definir taxa inicial
-    - Definir taxa por hora
-    - Alterar taxas
-* Carros  
-    - Adicionar veículo ao estacionamento
-    - Retirar veículo ao estacionamento
-    - Mostrar todos os veículo estacionados
+    - **Definir** capacidade total de vagas
+    - **Definir** taxa inicial
+    - **Definir** taxa por hora
+    - **Alterar** taxas
+* Carros:  
+    - **Adicionar** veículo ao estacionamento
+    - **Retirar** veículo ao estacionamento
+    - **Mostrar** todos os veículo estacionados
  * Persistência dos dados localmente em arquivo `.json`
 
 ---
@@ -69,7 +69,7 @@ Exemplo de estrutura JSON:
 ## 📸 Vídeo de Demonstração
 
 ### 🟣 Principais Funções 
-[![Assista no YouTube](https://img.youtube.com/vi/-LfQIChqLwA/0.jpg)](https://youtu.be/qxZjGeRGMmg)
+[![Assista no YouTube](https://i.ytimg.com/an_webp/qxZjGeRGMmg/mqdefault_6s.webp?du=3000&sqp=CLi1_sQG&rs=AOn4CLDVrPAGdZ66GC3dfiBZYGKXmT0Ewg)](https://youtu.be/qxZjGeRGMmg)
 
 ---
 
